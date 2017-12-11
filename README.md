@@ -39,14 +39,14 @@ Create object store database based on [IBM Knowledge Center](https://www.ibm.com
 
 #### 2.1 Download the sample configuration files.  
 Collect the following configuration files for your container environment:
-- XML configuration file for LDAP ([ldapAD.xml](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/ldapAD.xml))<br>
+- XML configuration file for LDAP ([ldapAD.xml](https://github.com/wukaiying/container-cpe/blob/master/examples/ldapAD.xml))<br>
 - XML configuration file for Db2 JDBC Driver ([DB2JCCDriver.xml
-](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/DB2JCCDriver.xml))<br>
-- JAR file for Db2 JDBC Driver ([db2jcc4.jar](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/db2jcc4.jar),[db2jcc_license_cu.jar](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/db2jcc_license_cu.jar))<br>
-- XML configuration file for GCD data source ([FNGCDDS.xml](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/FNGCDDS.xml))<br>
-- XML configuration file for Object Store data source ([OS1DS.xml](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/OS1DS.xml))<br>
-- JAR file for building bootstrap properties (1 of 2) ([BootstrapConfig.jar](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/BootstrapConfig.jar))
-- JAR file for building bootstrap properties (2 of 2) ([BootstrapConfigProps.jar](https://github.ibm.com/ecm-container-service/cpe-docker/blob/master/examples/BootstrapConfigProps.jar))
+](https://github.com/wukaiying/container-cpe/blob/master/examples/DB2JCCDriver.xml))<br>
+- JAR file for Db2 JDBC Driver ([db2jcc4.jar](https://github.com/wukaiying/container-cpe/blob/master/examples/db2jcc4.jar),[db2jcc_license_cu.jar](https://github.com/wukaiying/container-cpe/blob/master/examples/db2jcc_license_cu.jar))<br>
+- XML configuration file for GCD data source ([FNGCDDS.xml](https://github.com/wukaiying/container-cpe/blob/master/examples/FNGCDDS.xml))<br>
+- XML configuration file for Object Store data source ([OS1DS.xml](https://github.com/wukaiying/container-cpe/blob/master/examples/OS1DS.xml))<br>
+- JAR file for building bootstrap properties (1 of 2) ([BootstrapConfig.jar](https://github.com/wukaiying/container-cpe/blob/master/examples/BootstrapConfig.jar))
+- JAR file for building bootstrap properties (2 of 2) ([BootstrapConfigProps.jar](https://github.com/wukaiying/container-cpe/blob/master/examples/BootstrapConfigProps.jar))
 
 #### 2.2 Create the LDAP configuration.
 - Modify the ldapAD.xml file to reflect your LDAP configuration. The example configuration is for Microsoft Active Directory. At minimum, update the following values:
@@ -179,8 +179,8 @@ Validate your files:
 ## 1. Pull the Content Platform Engine Docker image
 
 Use the following Docker commands with your credentials to log in and pull the Docker image:
-- ```docker login -u ***** -p ****** ecm-containerization-docker-local.artifactory.swg-devops.com```
-- ```docker pull ecm-containerization-docker-local.artifactory.swg-devops.com/cpe:stable```
+- ```docker login -u mydockerid -p mydockerpw```
+- ```docker pull ibmcorp/filenet_content_platform_engine:earlyadopters-gm5.5```
 
 ## 2. Set the environment variables (optional)
 These optional variables can be set on your Docker container. You can pass these to the container when you run the image by using additional ```-e FLAG=value``` arguments.
